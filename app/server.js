@@ -2,14 +2,15 @@ const mongoose = require("mongoose");
 const app = require("../app");
 
 // const { DB_HOST, PORT = 3000 } = process.env;
-// const DB_HOST = process.env.MONGODB_URI;
+const DB_HOST = process.env.MONGODB_URI;
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
+  .connect(DB_HOST)
+  .then(() => {
+    console.log("Database connection successful");
+    app.listen(PORT);
   })
-  .then(() => console.log("MongoDB connect"))
-  .catch((ошибка) => console.log(ошибка));
+  .catch((error) => {
+    console.log(error.message);
+    process.exit(1);
+  });
