@@ -12,6 +12,10 @@ const router = express.Router();
 // router.post("/", auth, validation(joiSchemaNews), ctrlWrapper(ctrl.addNews));
 router.post("/add", validation(joiSchemaNews), ctrlWrapper(ctrl.addNews));
 
+//TODO Вывод всех новостей
+// router.get("/", auth,ctrlWrapper(ctrl.getAllNews));
+router.get("/", ctrlWrapper(ctrl.getAllNews));
+
 //TODO Удаление новости id
 // router.delete("/:id", auth, ctrlWrapper(ctrl.deleteNews));
 router.delete("/:id", ctrlWrapper(ctrl.deleteNews));

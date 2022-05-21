@@ -12,6 +12,10 @@ const router = express.Router();
 // router.post("/", auth, validation(joiSchemaMainNews), ctrlWrapper(ctrl.addMainNews));
 router.post("/add", validation(joiSchemaMainNews), ctrlWrapper(ctrl.addMainNews));
 
+//TODO Вывод главной новости
+// router.get("/", auth,ctrlWrapper(ctrl.getMainNews));
+router.get("/", ctrlWrapper(ctrl.getMainNews));
+
 //TODO Изменение главной новости
 // router.put("/editmainnews", auth, validation(joiSchemaMainNews), ctrlWrapper(ctrl.editMainNewsById));
 router.put("/edit/:id", validation(joiSchemaMainNews), ctrlWrapper(ctrl.editMainNewsById));

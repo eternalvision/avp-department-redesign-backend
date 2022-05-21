@@ -1,5 +1,4 @@
 const { AlertsNews } = require("../../models");
-const { NotFound } = require("http-errors");
 
 const deleteAlertsNews = async (req, res) => {
   const { id } = req.params;
