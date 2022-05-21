@@ -1,10 +1,9 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
+const dotenv = require("dotenv");
 
-const path = require("path");
-
-require("dotenv").config();
+dotenv.config({ path: "./.env" });
 
 // const authRouter = require("./routes/api/auth");
 const news = require("./routes/api/news");
