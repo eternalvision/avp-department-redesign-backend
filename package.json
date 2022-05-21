@@ -1,5 +1,5 @@
 {
-  "name": "ddma-backend",
+  "name": "ddma-redesign-backend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,10 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/eternalvision/ddma-redesign-backend.git"
   },
-  "author": "",
+  "author": "eternalvision",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maksar24/backend-kapusta/issues"
+    "url": "https://github.com/eternalvision/ddma-redesign-backend/issues"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
