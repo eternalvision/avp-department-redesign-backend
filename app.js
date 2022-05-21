@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const path = require("path");
 
-require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+require("dotenv").config();
 
 // const authRouter = require("./routes/api/auth");
 const news = require("./routes/api/news");
