@@ -5,7 +5,7 @@ const cors = require("cors");
 
 dotenv.config({ path: "./config/.env" });
 
-// const authRouter = require("./routes/api/auth");
+const authRouter = require("./routes/api/auth");
 const news = require("./routes/api/news");
 const alertsnews = require("./routes/api/alertsnews");
 const mainnews = require("./routes/api/mainnews");
@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-// app.use("/api/auth", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/api/news", news);
 app.use("/api/alertsnews", alertsnews);
 app.use("/api/mainnews", mainnews);
