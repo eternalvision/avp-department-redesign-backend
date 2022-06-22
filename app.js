@@ -1,11 +1,9 @@
-import * as dotenv from "dotenv";
-dotenv.config();
-
+require("dotenv").config({ path: "./.env" });
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 
-// dotenv.config({ path: "./config/.env" });
+// dotenv.config({ path: "./.env" });
 
 const authRouter = require("./routes/api/auth");
 const news = require("./routes/api/news");
