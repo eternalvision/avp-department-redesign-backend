@@ -40,13 +40,13 @@ authSchema.methods.comparePassword = function (password) {
 
 const joiSignUpSchema = Joi.object({
   name: Joi.string().min(3).required(),
-  password: Joi.string().min(8).required(),
   email: Joi.string().email().required(),
+  password: Joi.string().min(8).required(),
 });
 
 const joiLogInSchema = Joi.object({
-  password: Joi.string().min(8).required(),
   email: Joi.string().email().required(),
+  password: Joi.string().min(8).required(),
 });
 
 const Auth = model("auth", authSchema);
